@@ -1,0 +1,9 @@
+.agent/
+.gemini/
+stitch-skills-tmp/
+login antiguo/
+.DS_Store
+node_modules/
+dist/
+build/
+*.log

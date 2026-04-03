@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CUPCODE | ELITE LOGIN</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&amp;family=Public+Sans:wght@300;400;600&amp;family=Space+Grotesk:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#1c2335",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#dee1fb",
+                        "tertiary-fixed": "#dbe2fb",
+                        "primary-fixed-dim": "#ffb4a9",
+                        "error-container": "#93000a",
+                        "surface-tint": "#ffb4a9",
+                        "secondary-fixed-dim": "#c2c5de",
+                        "on-tertiary-fixed-variant": "#3f465a",
+                        "on-secondary": "#2b2f43",
+                        "surface-container-low": "#181b2a",
+                        "primary-fixed": "#ffdad5",
+                        "on-secondary-container": "#b4b7d0",
+                        "on-surface": "#e0e1f7",
+                        "secondary-container": "#44485d",
+                        "on-primary-fixed": "#410001",
+                        "on-tertiary-container": "#838aa1",
+                        "surface-container-lowest": "#0a0d1c",
+                        "surface-variant": "#313444",
+                        "tertiary-fixed-dim": "#bfc6de",
+                        "on-error": "#690005",
+                        "on-surface-variant": "#c7c5cd",
+                        "primary-container": "#4f0001",
+                        "outline": "#919097",
+                        "on-primary-fixed-variant": "#930004",
+                        "on-secondary-fixed": "#161b2d",
+                        "surface-container-high": "#262939",
+                        "inverse-on-surface": "#2d3040",
+                        "primary": "#ffb4a9",
+                        "tertiary": "#bfc6de",
+                        "on-primary-container": "#fd4536",
+                        "on-secondary-fixed-variant": "#42465a",
+                        "secondary": "#c2c5de",
+                        "outline-variant": "#46464c",
+                        "surface-bright": "#353849",
+                        "inverse-surface": "#e0e1f7",
+                        "surface": "#0f1221",
+                        "surface-dim": "#0f1221",
+                        "surface-container": "#1c1f2e",
+                        "on-tertiary": "#293043",
+                        "on-tertiary-fixed": "#141b2d",
+                        "error": "#ffb4ab",
+                        "background": "#0f1221",
+                        "inverse-primary": "#bd110e",
+                        "on-background": "#e0e1f7",
+                        "surface-container-highest": "#313444",
+                        "on-primary": "#690002"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Barlow Condensed", "sans-serif"],
+                        "body": ["Public Sans", "sans-serif"],
+                        "label": ["Public Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .barlow-condensed { font-family: 'Barlow Condensed', sans-serif; }
+        .public-sans { font-family: 'Public Sans', sans-serif; }
+        
+        /* Tactical Press Effect */
+        .active-shift:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-on-primary-container selection:text-white overflow-hidden">
+<main class="flex min-h-screen w-full relative">
+<!-- 40% Login Sidebar -->
+<section class="w-full md:w-[40%] bg-[#1E2235] z-20 flex flex-col justify-center items-center px-8 lg:px-16 border-r border-[#E63428]/20 relative">
+<!-- Branding -->
+<div class="absolute top-12 left-12">
+<span class="barlow-condensed text-3xl font-black uppercase tracking-tighter text-[#E63428]">CUPCODE</span>
+</div>
+<!-- Login Form Container -->
+<div class="w-full max-w-sm space-y-8">
+<div class="space-y-2">
+<h1 class="barlow-condensed text-5xl font-extrabold uppercase tracking-tighter text-white leading-none">
+                        WELCOME BACK
+                    </h1>
+<p class="public-sans text-[#8B92A9] text-xs font-semibold tracking-widest uppercase">
+                        Elite Performance Access Only
+                    </p>
+</div>
+<form class="space-y-5">
+<!-- Email Input -->
+<div class="space-y-2">
+<label class="public-sans text-[10px] font-bold text-white uppercase tracking-widest ml-1" for="email">Tactical Identifier</label>
+<div class="relative">
+<input class="w-full bg-[#141726] border border-[#46464c] text-on-surface py-3 px-4 focus:ring-0 focus:border-[#E63428] transition-colors public-sans text-sm rounded-DEFAULT" id="email" placeholder="name@organization.com" type="email"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="space-y-2">
+<div class="flex justify-between items-end">
+<label class="public-sans text-[10px] font-bold text-white uppercase tracking-widest ml-1" for="password">Security Protocol</label>
+<a class="public-sans text-[10px] text-[#8B92A9] hover:text-[#E63428] uppercase font-bold tracking-widest transition-colors" href="#">Forgot?</a>
+</div>
+<div class="relative">
+<input class="w-full bg-[#141726] border border-[#46464c] text-on-surface py-3 px-4 focus:ring-0 focus:border-[#E63428] transition-colors public-sans text-sm rounded-DEFAULT" id="password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<!-- Login Button -->
+<button class="w-full bg-[#E63428] text-white barlow-condensed font-black text-xl py-4 uppercase tracking-widest hover:bg-[#c52b21] transition-all active-shift rounded-DEFAULT" type="submit">
+                        AUTHENTICATE LOGIN
+                    </button>
+</form>
+<!-- Footnotes -->
+<div class="pt-6 border-t border-[#313444] flex flex-col space-y-4">
+<p class="public-sans text-[#8B92A9] text-[11px] font-medium text-center">
+                        Restricted terminal for professional roster management.
+                    </p>
+<button class="w-full bg-transparent border border-[#46464c] text-white py-3 public-sans text-xs font-bold uppercase tracking-widest hover:bg-[#262939] transition-colors active-shift rounded-DEFAULT">
+                        Request System Access
+                    </button>
+</div>
+</div>
+<!-- Footer Meta -->
+<div class="absolute bottom-8 text-[#46464c] text-[9px] uppercase tracking-[0.2em] font-bold">
+                ©2024 Cupcode Analytics Division
+            </div>
+</section>
+<!-- 60% Hero Panel -->
+<section class="hidden md:block md:w-[60%] relative overflow-hidden bg-black">
+<!-- Background Image with data-alt -->
+<div class="absolute inset-0 z-0">
+<img alt="Hockey Action" class="w-full h-full object-cover grayscale opacity-60" data-alt="Cinematic black and white shot of professional hockey players in a high-intensity puck battle against the boards, atmospheric stadium lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUMeDNA8Xurvc1Nm9wYkT_0B0I_Vd1Jhc0LjzKFWTU5Ic-L8N1dD05-6hh2I0qddaXyZJ8J2vYxPPOTTOcdCWObGWjnYUh0g6vrMlzQ-x9rJOQoxFKJONhjBcktH4SVWLgh6JLplNj2M4mzasNTNW7jHwdpkchqh-SZViZJuQUt0rbwAy5WUkE5sHJqE_v0ORVKKf2kdeJECxvNgpJkkf7XzVcbOnB2-k6qaUlckoji21f-BRFrhYLdPe6WNXW72iU1kaTSbnQBbE"/>
+</div>
+<!-- Red Brand Overlay -->
+<div class="absolute inset-0 bg-[#E63428]/30 z-10 mix-blend-multiply"></div>
+<!-- Gradient Divider -->
+<div class="absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-[#E63428] to-transparent z-30"></div>
+<!-- Cinematic Floating Card (High-Density Utility) -->
+<div class="absolute inset-0 z-20 flex items-center justify-center p-24">
+<div class="w-full max-w-lg bg-[#141726]/80 backdrop-blur-xl border-l-4 border-[#E63428] p-10 space-y-6 shadow-2xl">
+<div class="flex items-center space-gap-4">
+<span class="material-symbols-outlined text-[#E63428] text-4xl" data-weight="fill">monitoring</span>
+<div class="ml-4">
+<h2 class="barlow-condensed text-3xl font-black text-white leading-tight uppercase italic">LIVE_FEED: ACTIVE</h2>
+<p class="public-sans text-[#8B92A9] text-xs font-bold uppercase tracking-widest">Roster Analytics System 4.0</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6 pt-4">
+<div class="bg-[#262939]/60 p-4 border border-[#313444]">
+<p class="public-sans text-[#8B92A9] text-[9px] font-black tracking-widest uppercase">Offensive Intensity</p>
+<p class="barlow-condensed text-4xl text-[#E63428] font-black">94.2%</p>
+</div>
+<div class="bg-[#262939]/60 p-4 border border-[#313444]">
+<p class="public-sans text-[#8B92A9] text-[9px] font-black tracking-widest uppercase">System Uptime</p>
+<p class="barlow-condensed text-4xl text-white font-black">99.9</p>
+</div>
+</div>
+<p class="public-sans text-sm text-[#c7c5cd] leading-relaxed italic opacity-80">
+                        "Precision is the difference between victory and participation. Log in to access the elite performance engine."
+                    </p>
+</div>
+</div>
+<!-- Bottom Left Stat HUD -->
+<div class="absolute bottom-12 right-12 z-20 text-right">
+<p class="barlow-condensed text-white text-6xl font-black leading-none opacity-20 select-none">LEAGUE_PRIME</p>
+</div>
+</section>
+<!-- Mobile Background (visible on mobile only) -->
+<div class="md:hidden absolute inset-0 z-0">
+<img alt="Hockey Stadium" class="w-full h-full object-cover" data-alt="Blurred dark stadium locker room with hockey jerseys hanging, low moody lighting and dramatic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD1WpsNn_-3GnCcUaYtOg5xsAUekBFn9nbxnopGJd2k63Y-qHDx1A8AfRrVzeO6bngVDyztCK1rZMckFzqegqiGxo-BmGfCuMBEZrKfNoeE5RL-eb_pJxDDrPBhs6-Da0ULjuNJP6Z6q_H-AxQ5PKtUkmb2KH-OSpxHVyOGLxBezN0dILH4tc9NgP1uxdjiJLlAFkiUCsJB8VdlGViaiWlu19Wq01wDoeiup8YigEorENkIkFVSBM-S788FeRwjQTQO7rjz2jnBl4"/>
+<div class="absolute inset-0 bg-[#0f1221]/90 backdrop-blur-sm"></div>
+</div>
+</main>
+</body></html>
