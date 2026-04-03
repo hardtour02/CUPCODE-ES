@@ -59,11 +59,12 @@
             background-color: var(--bg-panel);
             display: flex;
             flex-direction: column;
-            padding: 8rem 10% 4rem;
+            padding: 6rem 10% 4rem; /* Reducido ligeramente de 8rem */
             justify-content: space-between;
             position: relative;
             z-index: 10;
             box-shadow: 20px 0 50px rgba(0, 0, 0, 0.4);
+            overflow-y: auto; /* Fallback para pantallas muy pequeñas */
         }
 
         .branding {
@@ -412,6 +413,70 @@
             color: rgba(255, 255, 255, 0.4);
         }
 
+        /* High-Density Laptop & Small Height Support (1366x768) */
+        @media (max-height: 800px) {
+            .left-panel {
+                padding: 3rem 10% 2rem;
+            }
+
+            .branding {
+                margin-bottom: 8px;
+            }
+
+            .logo {
+                height: 70px;
+            }
+
+            [data-theme="light"] .logo {
+                height: 54px;
+            }
+
+            .form-header {
+                margin-bottom: 1.5rem;
+            }
+
+            .form-header h1 {
+                font-size: 2rem;
+            }
+
+            .btn-primary {
+                height: 48px;
+                margin-top: 0.5rem;
+            }
+
+            .recovery-link {
+                margin-top: 1rem;
+            }
+
+            .status-badge {
+                top: 1.5rem;
+                right: 1.5rem;
+            }
+
+            .metrics-bar {
+                margin-top: 32px;
+                gap: 3rem;
+            }
+
+            .metric-value {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* Large Screen VW Adjustment */
+        @media (min-width: 1900px) {
+            .hero-phrase {
+                font-size: 5.5vw;
+            }
+        }
+
+        /* Generic Media Queries */
+        @media (max-width: 1400px) {
+            .hero-phrase {
+                font-size: 5vw;
+            }
+        }
+
         /* Mobile Adaptability */
         @media (max-width: 1024px) {
             .left-panel {
@@ -423,7 +488,7 @@
             }
 
             .hero-phrase {
-                font-size: 4rem;
+                font-size: 3.5rem;
             }
         }
 
@@ -443,10 +508,11 @@
                 background-image: linear-gradient(rgba(30, 34, 53, 0.95), rgba(30, 34, 53, 0.95)), url('desinginspo/imglogin01.png');
                 background-size: cover;
                 background-position: center;
+                overflow-y: auto;
             }
 
             .form-header h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
         }
 
